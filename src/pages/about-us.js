@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
+
 import MainContainer from "../components/MainContainer";
 
 class AboutUs extends Component {
@@ -9,6 +11,13 @@ class AboutUs extends Component {
         return (
             <MainContainer style={{backgroundColor: 'blue'}}>
                 <div>
+                    <Helmet
+                        title={data.site.siteMetadata.titles.aboutUs}
+                        meta={[
+                            { name: `description`, content: `Sample` },
+                            { name: `keywords`, content: `sample, something` },
+                        ]}
+                        />
                     <h3>{data.site.siteMetadata.titles.aboutUs}</h3>
                     <p>
                         <Link to="/">Home</Link>

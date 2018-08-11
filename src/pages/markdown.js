@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
+
 import MainContainer from "../components/MainContainer";
 
 const H3 = styled.h3`
@@ -17,6 +19,13 @@ class Markdown extends Component {
         return (
             <MainContainer style={{ backgroundColor: 'grey' }}>
                 <div>
+                    <Helmet
+                        title={data.site.siteMetadata.titles.markdown}
+                        meta={[
+                            { name: `description`, content: `Sample` },
+                            { name: `keywords`, content: `sample, something` },
+                        ]}
+                        />
                     <h2>{data.site.siteMetadata.titles.markdown}</h2>
                     {data.allMarkdownRemark.edges.map(({ node }) => (
                         <div key={node.id}>

@@ -27,5 +27,8 @@ module.exports = {
             },
         },
         `gatsby-transformer-remark`,
+        `gatsby-plugin-sass`,
+        `gatsby-plugin-offline`,
+        `gatsby-plugin-react-helmet`,
     ],
 };

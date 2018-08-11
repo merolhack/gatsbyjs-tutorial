@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
+
+import '../styles/main.scss';
 
 import MainContainer from "../components/MainContainer";
 
@@ -18,6 +21,13 @@ class Main extends Component {
         return (
             <MainContainer style={{ backgroundColor: 'red' }}>
                 <div>
+                    <Helmet
+                        title="Lenin GatsbyJS test...."
+                        meta={[
+                            { name: `description`, content: `Sample` },
+                            { name: `keywords`, content: `sample, something` },
+                        ]}
+                        />
                     <h3>{data.site.siteMetadata.titles.main}</h3>
                     <ul>
                         <li><p><Link to="/about-us">Go to About us</Link></p></li>

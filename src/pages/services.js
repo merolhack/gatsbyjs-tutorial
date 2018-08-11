@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 import MainContainer from "../components/MainContainer";
 
@@ -54,6 +55,13 @@ class Services extends Component {
         return (
             <MainContainer style={{backgroundColor: 'green'}}>
                 <div>
+                    <Helmet
+                        title={data.site.siteMetadata.titles.services}
+                        meta={[
+                            { name: `description`, content: `Sample` },
+                            { name: `keywords`, content: `sample, something` },
+                        ]}
+                        />
                     <TitleContainer>
                         <h3>{data.site.siteMetadata.titles.services}</h3>
                     </TitleContainer>
