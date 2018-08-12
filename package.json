@@ -1,23 +1,34 @@
 {
   "name": "gatsby-starter-hello-world",
   "description": "Gatsby hello world starter",
+  "author": "Lenin Meza <merolhack@gmail.com>",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "type-check": "tsc --noEmit",
+    "lint": "tslint --project ."
   },
   "dependencies": {
+    "@types/node": "^10.5.8",
+    "@types/react": "^16.4.9",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-helmet": "^5.0.7",
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "^1.9.277",
+    "gatsby-image": "^1.0.55",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-offline": "^1.0.18",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-sass": "^1.0.26",
+    "gatsby-plugin-sharp": "^1.6.48",
     "gatsby-plugin-styled-components": "^2.0.11",
+    "gatsby-plugin-typescript": "^1.4.20",
     "gatsby-plugin-typography": "^1.7.19",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
+    "gatsby-transformer-sharp": "^1.6.27",
     "node-sass": "^4.9.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -26,5 +37,18 @@
     "tachyons-sass": "^4.9.3",
     "typography": "^0.16.17",
     "typography-theme-bootstrap": "^0.16.7"
+  },
+  "devDependencies": {
+    "git-scripts": "^0.2.1",
+    "surge": "^0.20.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.14.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.1"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project public/ --domain married-light.surge.sh"
+    }
   }
 }
