@@ -3,20 +3,20 @@ import React, { Component } from "react"
 import Helmet from "react-helmet"
 import styled from "styled-components"
 
-import MainContainer from "../components/MainContainer.tsx"
+import MainContainer from "../components/MainContainer"
 
 const TitleContainer = styled.div`
     display: block;
     clear: both;
     width: 100vw;
     height: 20vh;
-`;
+`
 const CounterContainer = styled.div`
     display: block;
     clear: both;
     width: 100vw;
     height: 20vh;
-`;
+`
 const Button = styled.button`
     border-radius: 3px;
     padding: 0.25em 1em;
@@ -24,34 +24,34 @@ const Button = styled.button`
     background: transparent;
     color: palevioletred;
     border: 2px solid palevioletred;
-`;
+`
 const LinksContainer = styled.div`
     display: block;
     clear: both;
     width: 100vw;
     height: 20vh;
-`;
+`
 
 class Services extends Component {
     state = {
         counter: 0
-    };
+    }
 
     constructor(props) {
-        super(props);
+        super(props)
     }
 
     /**
      * Increments the counter
      */
     handleCounter = () => {
-        const counter = this.state.counter + 1;
-        this.setState({ counter });
+        const counter = this.state.counter + 1
+        this.setState({ counter })
     }
 
     render() {
-        const { counter } = this.state;
-        const { data } = this.props;
+        const { counter } = this.state
+        const { data } = this.props
         return (
             <MainContainer style={{backgroundColor: 'green'}}>
                 <div>
@@ -78,7 +78,7 @@ class Services extends Component {
                     </LinksContainer>
                 </div>
             </MainContainer>
-        );
+        )
     }
 }
 
@@ -92,6 +92,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default Services;
+export default Services

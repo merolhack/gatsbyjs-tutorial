@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types"
+import React from "react"
+import styled from "styled-components"
 
 const Container = styled.div`
     display: flex;
@@ -12,7 +12,7 @@ const Container = styled.div`
     padding: 0;
     background-color: 'white';
     z-index: 1;
-`;
+`
 
 class MainContainer extends React.Component {
   render() {
@@ -28,6 +28,6 @@ class MainContainer extends React.Component {
 MainContainer.propTypes = {
     children: PropTypes.element.isRequired,
     style: PropTypes.object
-};
+}
 
-export default MainContainer;
+export default MainContainer

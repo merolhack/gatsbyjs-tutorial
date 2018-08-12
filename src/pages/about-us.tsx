@@ -2,12 +2,12 @@ import Link from "gatsby-link"
 import React, { Component } from "react"
 import Helmet from "react-helmet"
 
-import MainContainer from "../components/MainContainer.tsx";
+import MainContainer from "../components/MainContainer"
 
 class AboutUs extends Component {
-    state = {};
+    state = {}
     render() {
-        const { data } = this.props;
+        const { data } = this.props
         return (
             <MainContainer style={{backgroundColor: 'blue'}}>
                 <div>
@@ -24,7 +24,7 @@ class AboutUs extends Component {
                     </p>
                 </div>
             </MainContainer>
-        );
+        )
     }
 }
 
@@ -38,6 +38,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default AboutUs;
+export default AboutUs

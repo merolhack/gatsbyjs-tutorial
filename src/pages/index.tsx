@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 import "../styles/main.scss"
 
-import MainContainer from "../components/MainContainer.tsx"
+import MainContainer from "../components/MainContainer"
 
 const H5 = styled.h5`
     margin-bottom: 10px;
